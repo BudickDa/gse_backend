@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aa246c5b581f4967ad339bd1fa1c4b31" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model1.FAQ" Width="1.5" PointX="2.875" PointY="2.75" />
+        <EntityTypeShape EntityType="Model1.Checklist" Width="1.5" PointX="5.125" PointY="2.875" />
+        <EntityTypeShape EntityType="Model1.ApplicationProcedure" Width="1.5" PointX="4.375" PointY="5.125" />
+        <EntityTypeShape EntityType="Model1.University" Width="1.5" PointX="7.125" PointY="3" />
+        <EntityTypeShape EntityType="Model1.FirstSteps" Width="1.5" PointX="8.75" PointY="5.125" />
+        <EntityTypeShape EntityType="Model1.ColorSchema" Width="1.5" PointX="11.75" PointY="4.375" />
+        <EntityTypeShape EntityType="Model1.Calendar" Width="1.5" PointX="13.75" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.Housing" Width="1.5" PointX="11" PointY="1" />
+        <EntityTypeShape EntityType="Model1.Departments" Width="1.5" PointX="7.25" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.POI" Width="1.5" PointX="3.875" PointY="0.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="FAQSet" EntityType="Model1.Store.FAQSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChecklistSet" EntityType="Model1.Store.ChecklistSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ApplicationProcedureSet" EntityType="Model1.Store.ApplicationProcedureSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UniversitySet" EntityType="Model1.Store.UniversitySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FirstStepsSet" EntityType="Model1.Store.FirstStepsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ColorSchemaSet" EntityType="Model1.Store.ColorSchemaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CalendarSet" EntityType="Model1.Store.CalendarSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HousingSet" EntityType="Model1.Store.HousingSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DepartmentsSet" EntityType="Model1.Store.DepartmentsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="POISet" EntityType="Model1.Store.POISet" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="FAQSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="question" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="answer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChecklistSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="information" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ApplicationProcedureSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="deathline" Type="datetime" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="information" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UniversitySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="information" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FirstStepsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="information" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ColorSchemaSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="colorOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="colorTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="colorThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="colorFive" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="colorFour" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CalendarSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="position" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="datetime" Type="datetime" Nullable="false" />
+    <Property Name="price" Type="smallint" Nullable="true" />
+    <Property Name="information" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HousingSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="position" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="price" Type="smallint" Nullable="false" />
+    <Property Name="information" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="moveIn" Type="datetime" Nullable="false" />
+    <Property Name="moveOut" Type="datetime" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DepartmentsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="position" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="information" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="POISet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="position" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="information" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FAQSet" EntityType="Model1.FAQ" />
+          <EntitySet Name="ChecklistSet" EntityType="Model1.Checklist" />
+          <EntitySet Name="ApplicationProcedureSet" EntityType="Model1.ApplicationProcedure" />
+          <EntitySet Name="UniversitySet" EntityType="Model1.University" />
+          <EntitySet Name="FirstStepsSet" EntityType="Model1.FirstSteps" />
+          <EntitySet Name="ColorSchemaSet" EntityType="Model1.ColorSchema" />
+          <EntitySet Name="CalendarSet" EntityType="Model1.Calendar" />
+          <EntitySet Name="HousingSet" EntityType="Model1.Housing" />
+          <EntitySet Name="DepartmentsSet" EntityType="Model1.Departments" />
+          <EntitySet Name="POISet" EntityType="Model1.POI" />
+        </EntityContainer>
+        <EntityType Name="FAQ">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="question" Type="String" Nullable="false" />
+          <Property Name="answer" Type="String" Nullable="false" />
+          <Property Name="link" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Checklist">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="link" Type="String" Nullable="false" />
+          <Property Name="information" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ApplicationProcedure">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="deathline" Type="DateTime" Nullable="false" />
+          <Property Name="link" Type="String" Nullable="false" />
+          <Property Name="information" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="University">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="information" Type="String" Nullable="false" />
+          <Property Name="link" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FirstSteps">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="information" Type="String" Nullable="false" />
+          <Property Name="link" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ColorSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="colorOne" Type="String" Nullable="false" MaxLength="Max" />
+          <Property Name="colorTwo" Type="String" Nullable="false" MaxLength="Max" />
+          <Property Name="colorThree" Type="String" Nullable="false" MaxLength="Max" />
+          <Property Name="colorFive" Type="String" Nullable="false" MaxLength="Max" />
+          <Property Name="colorFour" Type="String" Nullable="false" MaxLength="Max" />
+        </EntityType>
+        <EntityType Name="Calendar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="position" Type="String" Nullable="false" />
+          <Property Name="datetime" Type="DateTime" Nullable="false" />
+          <Property Name="price" Type="Int16" Nullable="true" />
+          <Property Name="information" Type="String" Nullable="false" />
+          <Property Name="link" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Housing">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="position" Type="String" Nullable="false" />
+          <Property Name="price" Type="Int16" Nullable="false" />
+          <Property Name="information" Type="String" Nullable="false" />
+          <Property Name="moveIn" Type="DateTime" Nullable="false" />
+          <Property Name="moveOut" Type="DateTime" Nullable="false" />
+          <Property Name="link" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="position" Type="String" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="link" Type="String" Nullable="false" />
+          <Property Name="information" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="POI">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="position" Type="String" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <Property Name="information" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="FAQSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.FAQ)">
+        <MappingFragment StoreEntitySet="FAQSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChecklistSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Checklist)">
+        <MappingFragment StoreEntitySet="ChecklistSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="information" ColumnName="information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationProcedureSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ApplicationProcedure)">
+        <MappingFragment StoreEntitySet="ApplicationProcedureSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="deathline" ColumnName="deathline" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="information" ColumnName="information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UniversitySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.University)">
+        <MappingFragment StoreEntitySet="UniversitySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="information" ColumnName="information" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FirstStepsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.FirstSteps)">
+        <MappingFragment StoreEntitySet="FirstStepsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="information" ColumnName="information" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColorSchemaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ColorSchema)">
+        <MappingFragment StoreEntitySet="ColorSchemaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="colorOne" ColumnName="colorOne" />
+          <ScalarProperty Name="colorTwo" ColumnName="colorTwo" />
+          <ScalarProperty Name="colorThree" ColumnName="colorThree" />
+          <ScalarProperty Name="colorFive" ColumnName="colorFive" />
+          <ScalarProperty Name="colorFour" ColumnName="colorFour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalendarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Calendar)">
+        <MappingFragment StoreEntitySet="CalendarSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="information" ColumnName="information" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HousingSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Housing)">
+        <MappingFragment StoreEntitySet="HousingSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="information" ColumnName="information" />
+          <ScalarProperty Name="moveIn" ColumnName="moveIn" />
+          <ScalarProperty Name="moveOut" ColumnName="moveOut" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepartmentsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Departments)">
+        <MappingFragment StoreEntitySet="DepartmentsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="information" ColumnName="information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POISet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.POI)">
+        <MappingFragment StoreEntitySet="POISet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="information" ColumnName="information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

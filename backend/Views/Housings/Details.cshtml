@@ -1,0 +1,66 @@
+﻿@model backend.Models.Housing
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Housing</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.information)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.information)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.moveIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.moveIn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.moveOut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.moveOut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.link)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

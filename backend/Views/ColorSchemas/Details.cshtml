@@ -1,0 +1,58 @@
+﻿@model backend.Models.ColorSchema
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ColorSchema</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.colorOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.colorOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.colorTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.colorTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.colorThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.colorThree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.colorFive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.colorFive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.colorFour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.colorFour)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
