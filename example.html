@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <style>
+        #target div{
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -37,20 +42,47 @@
     <main class="mdl-layout__content">
         <div class="page-content">
             <h2>This is a short demo:</h2>
-            <div id="target">
+            <div id="target" class="mdl-grid">
 
             </div>
         </div>
     </main>
     <script>
-      fetch('http://gsebackendapi.azurewebsites.net/Api/FAQs', {
-        method: 'get',
-        mode: 'no-cors'
-      }).then(function(response) {
-        console.log(response);
-      }).catch(function(err) {
-        console.error(err);
-      });
+        fetch('http://gsebackendapi.azurewebsites.net/Api/FAQs', {
+            method: 'get'
+        }).then(function(response) {
+            return response.json();
+        }).then(function(json) {
+            //print result to console
+            console.log(json);
+
+            //get target element
+            const target = document.getElementById('target');
+            var html = '';
+
+            //iterate through json array
+            json.forEach(function(item) {
+                html += `
+                <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
+                    <h3>Question</h3>
+                    <p>${item.question}</p>
+                    <hr/>
+                    <h3>Answer</h3>
+                    <p>${item.answer}</p>
+                </div>
+                `;
+            });
+
+            //print created html to console
+            console.log(html);
+
+            //write html to element
+            target.innerHTML = html;
+
+        }).catch(function(err) {
+            //print error to console
+            console.error(err);
+        });
     </script>
 </div>
 </body>
