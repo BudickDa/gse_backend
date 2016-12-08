@@ -47,7 +47,7 @@ namespace backend.Controllers.backend
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,information,link")] FirstSteps firstSteps)
+        public async Task<ActionResult> Create([Bind(Include = "Id,information,link,description")] FirstSteps firstSteps)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace backend.Controllers.backend
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,information,link")] FirstSteps firstSteps)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,information,link,description")] FirstSteps firstSteps)
         {
             if (ModelState.IsValid)
             {

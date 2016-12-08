@@ -425,11 +425,6 @@
     <Content Include="Views\Universities\Details.cshtml" />
     <Content Include="Views\Universities\Edit.cshtml" />
     <Content Include="Views\Universities\Index.cshtml" />
-    <Content Include="Views\FirstSteps\Create.cshtml" />
-    <Content Include="Views\FirstSteps\Delete.cshtml" />
-    <Content Include="Views\FirstSteps\Details.cshtml" />
-    <Content Include="Views\FirstSteps\Edit.cshtml" />
-    <Content Include="Views\FirstSteps\Index.cshtml" />
     <Content Include="Views\Departments\Create.cshtml" />
     <Content Include="Views\Departments\Delete.cshtml" />
     <Content Include="Views\Departments\Details.cshtml" />
@@ -450,6 +445,11 @@
     <Content Include="Views\ColorSchemas\Details.cshtml" />
     <Content Include="Views\ColorSchemas\Edit.cshtml" />
     <Content Include="Views\ColorSchemas\Index.cshtml" />
+    <Content Include="Views\FirstSteps\Create.cshtml" />
+    <Content Include="Views\FirstSteps\Delete.cshtml" />
+    <Content Include="Views\FirstSteps\Details.cshtml" />
+    <Content Include="Views\FirstSteps\Edit.cshtml" />
+    <Content Include="Views\FirstSteps\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

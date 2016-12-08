@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 12/01/2016 13:37:05
+-- Date Created: 12/08/2016 12:13:39
 -- Generated from EDMX file: D:\Repositories\backend\backend\Models\Model1.edmx
 -- --------------------------------------------------
 
@@ -96,7 +96,8 @@ GO
 CREATE TABLE [dbo].[FirstStepsSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [information] nvarchar(max)  NOT NULL,
-    [link] nvarchar(max)  NOT NULL
+    [link] nvarchar(max)  NOT NULL,
+    [description] nvarchar(max)  NULL
 );
 GO
 

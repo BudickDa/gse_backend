@@ -59,6 +59,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="information" Type="nvarchar(max)" Nullable="false" />
     <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="ColorSchemaSet">
     <Key>
@@ -171,6 +172,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="information" Type="String" Nullable="false" />
           <Property Name="link" Type="String" Nullable="false" />
+          <Property Name="description" Type="String" Nullable="true" />
         </EntityType>
         <EntityType Name="ColorSchema">
           <Key>
@@ -276,6 +278,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="information" ColumnName="information" />
           <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="description" ColumnName="description" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
